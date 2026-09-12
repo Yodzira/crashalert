@@ -4,6 +4,8 @@
 
 **[EN]** A WordPress fatal-error monitor: instant alerts to **Telegram, email and webhook**, culprit attribution (plugin/theme/core with version), plain-language explanations, a recovery notice and failure history. Know about a crash before your clients do.
 
+🔗 **[Лендинг / Landing](https://yodzira.github.io/crashalert/)** · [**Скачать бесплатно / Download free**](https://github.com/Yodzira/crashalert/releases/latest/download/crashalert.zip) · [**Купить Pro — 2 990 ₽/год**](https://lava.top/products/74ac91fa-1a05-41f4-a9f5-2603ec2dfc4a)
+
 ---
 
 ## Зачем / Why
@@ -23,7 +25,7 @@ WordPress с версии 5.2 сам шлёт письмо о фатальной
 
 ## Установка / Install
 
-1. Скачайте `crashalert.zip` со страницы [Releases](https://github.com/Yodzira/crashalert/releases/latest)
+1. Скачайте [`crashalert.zip`](https://github.com/Yodzira/crashalert/releases/latest/download/crashalert.zip) (всегда последняя версия)
 2. WP-админка → **Плагины → Добавить новый → Загрузить плагин** → zip → Активировать
 3. CrashAlert → Settings → вставьте Telegram bot token и chat id → **Send test** — готово
 
@@ -44,6 +46,8 @@ WordPress с версии 5.2 сам шлёт письмо о фатальной
 - **PHP deprecation-радар**: собирает deprecated-варнинги и предупреждает, что сломается в будущих версиях PHP
 - **Неограниченные каналы**: несколько Telegram-чатов и вебхуков
 - **Недельный health-отчёт**: топ виновников, версии-деградации
+
+**[Купить Pro — 2 990 ₽/год](https://lava.top/products/74ac91fa-1a05-41f4-a9f5-2603ec2dfc4a)** · лицензия на 1 сайт. Pro — плагин-компаньон: ставится поверх бесплатной версии, ничего перенастраивать не надо. Бесплатная версия остаётся полноценной и не ограничена по срокам.
 
 ## Лицензия / License
 
