@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CrashAlert — узнай о падении сайта раньше клиента</title>
+<meta name="description" content="Плагин WordPress: мгновенные алерты о фатальных ошибках в Telegram, email и вебхук. Виновник с версией, человеческое объяснение, сообщение о восстановлении. Бесплатная версия + Pro.">
+<meta property="og:title" content="CrashAlert — fatal error alerts for WordPress">
+<meta property="og:description" content="Get a Telegram alert the moment your site fatals — with the culprit plugin and a plain-language explanation.">
+<style>
+  :root{--bg:#0d1117;--panel:#161d27;--line:#232b36;--text:#f0f2f5;--muted:#8b949e;
+        --accent:#e53935;--green:#3fb950;--yellow:#d4a72c;--blue:#58a6ff}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  header{border-bottom:1px solid var(--line);padding:14px 0}
+  header .wrap{display:flex;align-items:center;gap:12px}
+  .logo{width:34px;height:34px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff}
+  .brand{font-weight:800;font-size:20px}
+  .lang{margin-left:auto;display:flex;gap:8px}
+  .lang button{background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:6px 12px;cursor:pointer;font-size:14px}
+  .lang button.on{border-color:var(--accent);color:var(--text)}
+  .hero{padding:64px 0 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+  h1{font-size:40px;line-height:1.15;margin-bottom:16px}
+  h1 .red{color:var(--accent)}
+  .sub{color:var(--muted);font-size:19px;margin-bottom:28px}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 24px;border-radius:10px;font-weight:700;text-decoration:none;font-size:17px}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-ghost{border:2px solid var(--green);color:var(--green)}
+  .note{color:var(--muted);font-size:13px;margin-top:12px}
+  .tg{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:0 18px 50px rgba(0,0,0,.5)}
+  .tg .cap{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+  .tg .msg{background:#10151d;border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:15px}
+  .tg .fatal{color:var(--accent);font-weight:700}
+  .tg .ok{color:var(--green);font-weight:700}
+  .tg .dim{color:var(--muted);font-size:13px}
+  .tg .time{color:var(--muted);font-size:12px;text-align:right;margin-top:6px}
+  section{padding:44px 0}
+  h2{font-size:30px;margin-bottom:24px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .card b{display:block;margin-bottom:8px;font-size:17px}
+  .card span{color:var(--muted);font-size:15px}
+  table{width:100%;border-collapse:collapse;background:var(--panel);border-radius:12px;overflow:hidden}
+  th,td{padding:14px 18px;border-bottom:1px solid var(--line);text-align:left;font-size:16px}
+  th{background:#1b2330}
+  td.yes{color:var(--green);font-weight:700}
+  td.no{color:var(--muted)}
+  .price{color:var(--green);font-weight:800}
+  .faq div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+  .faq b{display:block;margin-bottom:6px}
+  .faq p{color:var(--muted);font-size:15px}
+  footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:14px}
+  footer a{color:var(--blue);text-decoration:none}
+  .en{display:none}
+  @media(max-width:860px){.hero{grid-template-columns:1fr}.hero{padding-top:36px}h1{font-size:32px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="logo">C</div><div class="brand">CrashAlert</div>
+  <div class="lang"><button id="ruBtn" class="on" onclick="setLang('ru')">RU</button><button id="enBtn" onclick="setLang('en')">EN</button></div>
+</div></header>
+
+<div class="wrap">
+<!-- ============ RU ============ -->
+<div id="ru">
+  <div class="hero">
+    <div>
+      <h1>Узнай о падении сайта <span class="red">раньше клиента</span></h1>
+      <p class="sub">CrashAlert — монитор фатальных ошибок WordPress: алерт в Telegram за секунды, виновник с версией, человеческое объяснение и сообщение «сайт снова работает».</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://lava.top/products/74ac91fa-1a05-41f4-a9f5-2603ec2dfc4a">Купить Pro — 2 990 ₽/год</a>
+        <a class="btn btn-ghost" href="https://github.com/Yodzira/crashalert/releases/latest/download/crashalert.zip">Скачать бесплатно</a>
+      </div>
+      <p class="note">WordPress 6.0+ • PHP 7.4+ • ~5 мс на здоровом запросе • алерт уходит из очереди и не тормозит страницу</p>
+    </div>
+    <div class="tg">
+      <div class="cap">Так выглядит алерт в Telegram</div>
+      <div class="msg">
+        <span class="fatal">🔴 CrashAlert — фатал на сайте</span><br><br>
+        <b>Виновник:</b> плагин «Super Slider» v2.1<br>
+        <span class="dim">(обновился 4 минуты назад)</span><br><br>
+        Вызов несуществующего метода — обычно после обновления. Откатите плагин или включите режим восстановления.<br><br>
+        <span class="ok">🟢 Сайт снова работает. Недоступен был ~4 мин</span>
+        <div class="time">14:32</div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Что он делает</h2>
+    <div class="grid">
+      <div class="card"><b>Мгновенный алерт</b><span>Telegram, email или вебхук. Доставка из очереди с ретраями; один алерт на повторяющуюся ошибку — без шквала уведомлений.</span></div>
+      <div class="card"><b>Виновник с версией</b><span>Плагин, mu-плагин, тема или ядро — с версией и тем, что изменилось за 24 часа до падения.</span></div>
+      <div class="card"><b>Человеческий язык</b><span>«Вызов несуществующего метода» вместо сырого стека, плюс первый шаг помощи. RU и EN.</span></div>
+      <div class="card"><b>Сообщение о восстановлении</b><span>«Сайт снова работает, недоступен был ~4 минуты» — спокойствие, за которое платят.</span></div>
+      <div class="card"><b>Таймлайн и история</b><span>События хранятся 60 дней, повторы дедуплицируются со счётчиком «×N».</span></div>
+      <div class="card"><b>Чистое удаление</b><span>Таблицы, настройки, кроны и файлы стираются при деинсталляции. Никакого мусора.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Free и Pro</h2>
+    <table>
+      <tr><th></th><th>Free</th><th>Pro</th></tr>
+      <tr><td>Перехват фатальных ошибок + виновник</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>Алерты Telegram / email / вебхук</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>Корреляция с обновлениями, восстановление, таймлайн</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td><b>Радар deprecations</b>: что станет фатальным в будущих версиях PHP</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td><b>Неограниченные каналы</b> и маршрутизация (фатал → Telegram, варнинги → email)</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td><b>Недельный health-отчёт</b>: топ виновников и деградации версий</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td>Цена</td><td>0 ₽</td><td class="price">2 990 ₽ / год</td></tr>
+    </table>
+    <p class="note" style="margin-top:14px">Pro — плагин-компаньон поверх бесплатной версии. Одна лицензия на один сайт.</p>
+  </section>
+
+  <section class="faq">
+    <h2>Вопросы</h2>
+    <div><b>Ядро WordPress и так шлёт письмо о фатале. Чем это лучше?</b><p>Письмо ядра приходит владельцу сайта, теряется в спаме и молчит о повторах и восстановлении. CrashAlert быстрее (Telegram за секунды), адреснее (виновник + что обновлялось), показывает «снова работает» и хранит историю.</p></div>
+    <div><b>Замедлит ли сайт?</b><p>Нет. На здоровом запросе — только чтение одной опции, суммарно ~5 мс. Алерт уходит из cron-очереди уже после отдачи страницы.</p></div>
+    <div><b>А если база данных недоступна?</b><p>Последнее событие пишется в файл в uploads/crashalert/ (папка закрыта .htaccess) и уйдёт в алерт при восстановлении.</p></div>
+    <div><b>Как установить?</b><p>Скачайте zip → Плагины → Добавить новый → Загрузить плагин → Активировать. В админке появится меню CrashAlert.</p></div>
+  </section>
+</div>
+
+<!-- ============ EN ============ -->
+<div id="en" class="en">
+  <div class="hero">
+    <div>
+      <h1>Know your site is down <span class="red">before your customers do</span></h1>
+      <p class="sub">CrashAlert is a WordPress fatal-error monitor: a Telegram alert in seconds, the culprit plugin with its version, a plain-language explanation, and a "site is back up" notice.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://lava.top/products/74ac91fa-1a05-41f4-a9f5-2603ec2dfc4a">Buy Pro — $34/year</a>
+        <a class="btn btn-ghost" href="https://github.com/Yodzira/crashalert/releases/latest/download/crashalert.zip">Download free</a>
+      </div>
+      <p class="note">WordPress 6.0+ • PHP 7.4+ • ~5 ms on a healthy request • alerts leave via a queue, never block the page</p>
+    </div>
+    <div class="tg">
+      <div class="cap">What the Telegram alert looks like</div>
+      <div class="msg">
+        <span class="fatal">🔴 CrashAlert — fatal on site</span><br><br>
+        <b>Culprit:</b> plugin "Super Slider" v2.1<br>
+        <span class="dim">(updated 4 minutes ago)</span><br><br>
+        Call to an undefined method — typical after an update. Roll the plugin back or open recovery mode.<br><br>
+        <span class="ok">🟢 Site recovered after ~4 min</span>
+        <div class="time">14:32</div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2>What it does</h2>
+    <div class="grid">
+      <div class="card"><b>Instant alert</b><span>Telegram, email, or a webhook. Queued delivery with retries; one alert per repeating error — no notification storms.</span></div>
+      <div class="card"><b>Culprit with version</b><span>Plugin, mu-plugin, theme, or core — with the version and what changed in the 24 hours before the crash.</span></div>
+      <div class="card"><b>Plain language</b><span>"Call to an undefined method" instead of a raw stack trace, plus a first-aid step. English and Russian.</span></div>
+      <div class="card"><b>Recovery notice</b><span>"Site is back up — it was down for ~4 minutes." The peace of mind people pay for.</span></div>
+      <div class="card"><b>Timeline &amp; history</b><span>Events kept for 60 days; repeats are deduplicated with an "×N" counter.</span></div>
+      <div class="card"><b>Clean uninstall</b><span>Tables, options, cron events, and files are wiped on deletion. Zero leftovers.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Free vs Pro</h2>
+    <table>
+      <tr><th></th><th>Free</th><th>Pro</th></tr>
+      <tr><td>Fatal error capture + culprit attribution</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>Alerts to Telegram / email / webhook</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>Update correlation, recovery notice, timeline</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td><b>Deprecation radar</b>: what will fatal in future PHP versions</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td><b>Unlimited channels</b> &amp; routing (fatals → Telegram, warnings → email)</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td><b>Weekly health report</b>: top culprits and version drift</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td>Price</td><td>Free</td><td class="price">$34 / year</td></tr>
+    </table>
+    <p class="note" style="margin-top:14px">Pro is a companion plugin on top of the free version. One license per site.</p>
+  </section>
+
+  <section class="faq">
+    <h2>FAQ</h2>
+    <div><b>WordPress core already emails me about fatals. Why this?</b><p>The core email goes to the site owner, lands in spam, and says nothing about repeats or recovery. CrashAlert is faster (Telegram in seconds), more specific (culprit + what was updated), shows "back up" notices, and keeps history.</p></div>
+    <div><b>Will it slow my site down?</b><p>No. On a healthy request it only reads one option — about 5 ms total. Alerts leave via a cron queue after the page is served.</p></div>
+    <div><b>What if the database is down?</b><p>The last event is written to a file in uploads/crashalert/ (folder blocked via .htaccess) and sent once the site recovers.</p></div>
+    <div><b>How do I install it?</b><p>Download the zip → Plugins → Add New → Upload Plugin → Activate. A CrashAlert menu appears in wp-admin.</p></div>
+  </section>
+</div>
+
+<footer><div class="wrap">
+  CrashAlert © 2026 · <a href="https://github.com/Yodzira/crashalert">GitHub</a> · GPL-2.0 · Бесплатная версия — свободная лицензия, Pro — годовая лицензия на 1 сайт.
+</div></footer>
+</div>
+
+<script>
+function setLang(l){
+  document.getElementById('ru').style.display = l==='ru'?'block':'none';
+  document.getElementById('en').style.display = l==='en'?'block':'none';
+  document.getElementById('ruBtn').className = l==='ru'?'on':'';
+  document.getElementById('enBtn').className = l==='en'?'on':'';
+}
+</script>
+</body>
+</html>
