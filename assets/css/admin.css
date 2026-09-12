@@ -1,0 +1,4 @@
+/* CrashAlert admin */
+#wp-admin-bar-wpca-status .ab-item { font-weight: 600; }
+.wpca-title { color: #1d2327; font-weight: 600; }
+.wpca-hint { color: #646970; }
