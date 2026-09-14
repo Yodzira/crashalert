@@ -39,7 +39,7 @@ overhead.
 
 Looking for more? The optional CrashAlert Pro companion adds a PHP
 deprecation radar (warnings that will become fatals in future PHP versions),
-unlimited alert channels and a weekly health report: https://app.lava.top/products/74ac91fa-1a05-41f4-a9f5-2603ec2dfc4a
+unlimited alert channels and a weekly health report: https://yodsira.duckdns.org/buy/crashalert
 
 = Why not just rely on the WordPress core email? =
 

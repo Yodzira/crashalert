@@ -180,7 +180,7 @@ class WPCA_Admin {
 
 			<p class="description">
 				<?php esc_html_e( 'Pro: PHP deprecation radar, unlimited alert channels and a weekly health report.', 'crashalert' ); ?>
-				<a href="https://app.lava.top/products/74ac91fa-1a05-41f4-a9f5-2603ec2dfc4a" target="_blank" rel="noopener"><?php esc_html_e( 'Upgrade to CrashAlert Pro', 'crashalert' ); ?> &rarr;</a>
+				<a href="https://yodsira.duckdns.org/buy/crashalert" target="_blank" rel="noopener"><?php esc_html_e( 'Upgrade to CrashAlert Pro', 'crashalert' ); ?> &rarr;</a>
 			</p>
 
 			<h2><?php esc_html_e( 'Event timeline', 'crashalert' ); ?></h2>
@@ -237,7 +237,7 @@ class WPCA_Admin {
 			<h1><?php esc_html_e( 'CrashAlert settings', 'crashalert' ); ?></h1>
 			<div class="notice notice-info"><p>
 				<?php esc_html_e( 'Pro adds a PHP deprecation radar, unlimited alert channels and a weekly health report.', 'crashalert' ); ?>
-				<a href="https://app.lava.top/products/74ac91fa-1a05-41f4-a9f5-2603ec2dfc4a" target="_blank" rel="noopener">CrashAlert Pro &rarr;</a>
+				<a href="https://yodsira.duckdns.org/buy/crashalert" target="_blank" rel="noopener">CrashAlert Pro &rarr;</a>
 			</p></div>
 			<?php if ( isset( $_GET['saved'] ) ) : // phpcs:ignore WordPress.Security.NonceVerification ?>
 				<div class="notice notice-success"><p><?php esc_html_e( 'Saved.', 'crashalert' ); ?></p></div>
