@@ -40,7 +40,6 @@ class WPCA_Plugin {
 	}
 
 	public static function load_textdomain() {
-		load_plugin_textdomain( 'crashalert', false, dirname( plugin_basename( WPCA_FILE ) ) . '/languages' );
 	}
 
 	public static function activate() {

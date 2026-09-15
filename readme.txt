@@ -1,5 +1,5 @@
 === CrashAlert ===
-Contributors: yodzira
+Contributors: yodsira
 Tags: fatal error, error monitoring, telegram, debugging, alerts
 Requires at least: 6.0
 Tested up to: 7.1
