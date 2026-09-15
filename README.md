@@ -4,7 +4,7 @@
 
 **[EN]** A WordPress fatal-error monitor: instant alerts to **Telegram, email and webhook**, culprit attribution (plugin/theme/core with version), plain-language explanations, a recovery notice and failure history. Know about a crash before your clients do.
 
-🔗 **[Лендинг / Landing](https://yodzira.github.io/crashalert/)** · [**Скачать бесплатно / Download free**](https://github.com/Yodzira/crashalert/releases/latest/download/crashalert.zip) · [**Купить Pro — 2 990 ₽/год**](https://yodsira.duckdns.org/ru/buy/crashalert)
+🔗 **[Лендинг / Landing](https://yodzira.github.io/crashalert/)** · [**Скачать бесплатно / Download free**](https://github.com/Yodzira/crashalert/releases/latest/download/crashalert.zip) · [**Купить Pro — 2 990 ₽/год**](https://yodsira.com/ru/buy/crashalert)
 
 ---
 
@@ -47,7 +47,7 @@ WordPress с версии 5.2 сам шлёт письмо о фатальной
 - **Неограниченные каналы**: несколько Telegram-чатов и вебхуков
 - **Недельный health-отчёт**: топ виновников, версии-деградации
 
-**[Купить Pro — 2 990 ₽/год](https://yodsira.duckdns.org/ru/buy/crashalert)** · лицензия на 1 сайт. Pro — плагин-компаньон: ставится поверх бесплатной версии, ничего перенастраивать не надо. Бесплатная версия остаётся полноценной и не ограничена по срокам.
+**[Купить Pro — 2 990 ₽/год](https://yodsira.com/ru/buy/crashalert)** · лицензия на 1 сайт. Pro — плагин-компаньон: ставится поверх бесплатной версии, ничего перенастраивать не надо. Бесплатная версия остаётся полноценной и не ограничена по срокам.
 
 ## Лицензия / License
 
